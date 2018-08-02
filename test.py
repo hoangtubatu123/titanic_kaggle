@@ -143,7 +143,6 @@ forrest = RandomForestClassifier()
 forest_cv = GridSearchCV(estimator=forrest, param_grid=forrest_params, cv=5)
 forest_cv.fit(all_X, all_y)
 predictions = forest_cv.predict(test_1)
-predictions = random_forest.predict(test_1)
 
 test_ids = test_1["PassengerId"]
 submission_df = {"PassengerId": test_ids,
